@@ -19,3 +19,11 @@ body{
     height: 100vh;
 }
 
+.iconos{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-around;
+    gap: 20px;
+}
