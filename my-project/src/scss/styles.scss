@@ -14,13 +14,14 @@ body{
 .asuka{
     background-image: url('../img/asuka.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment:fixed;
+    padding: 10px 20px;
     width: 100%;
     height: 100vh;
 }
 
 .iconos{
-    display: flex;
+    display: block;
     flex-direction: column;
     padding: 20px 15px;
     margin: 10px;

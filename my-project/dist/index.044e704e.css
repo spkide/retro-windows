@@ -13171,6 +13171,7 @@ body {
   background-attachment: fixed;
   width: 100%;
   height: 100vh;
+  padding: 10px 20px;
 }
 
 .iconos {
@@ -13179,13 +13180,13 @@ body {
   gap: 20px;
   margin: 10px;
   padding: 20px 15px;
-  display: flex;
+  display: block;
 }
 
 .sistema, .trash {
   color: #000;
   margin-top: -10px;
-  margin-left: 10px;
+  margin-left: 15px;
   text-decoration: none;
   display: block;
 }
