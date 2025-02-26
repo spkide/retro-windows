@@ -22,8 +22,24 @@ body{
 .iconos{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px 15px;
     margin: 10px;
     justify-content: space-around;
     gap: 20px;
+}
+
+.sistema{
+    display: block;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-top: -10px;
+    color: black;
+}
+
+.trash{
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin-top: -10px;
+    margin-left: 15px;
 }
