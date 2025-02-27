@@ -13183,10 +13183,10 @@ body {
   display: block;
 }
 
-.sistema, .trash {
+.titulo {
   color: #000;
   margin-top: -10px;
-  margin-left: 15px;
+  margin-left: 10px;
   text-decoration: none;
   display: block;
 }
