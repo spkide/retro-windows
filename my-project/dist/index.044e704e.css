@@ -13190,4 +13190,12 @@ body {
   text-decoration: none;
   display: block;
 }
+
+.pestaña {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 /*# sourceMappingURL=index.044e704e.css.map */
