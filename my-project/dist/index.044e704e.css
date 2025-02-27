@@ -13194,8 +13194,10 @@ body {
 .pestaña {
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 40%;
+  height: 40%;
+  margin-top: 10vh;
+  margin-left: 90vh;
   display: flex;
 }
 /*# sourceMappingURL=index.044e704e.css.map */
