@@ -9,15 +9,48 @@
 </head>
 <body>
     <div class="asuka">
-            <img src="img/computer_explorer_cool-0.png" alt="" class="iconos"><a href="#" class="titulo">Sistema</a>
-            <img src="img/recycle_bin_empty_cool-0.png" alt="" class="iconos"><a href="#" class="titulo">Basura</a>
-            <div class="">
-                <img src="img/dekst3p-71203106-be50-44a3-b424-e377c6572bef.png" alt="" class="pestaña">
+            <a href="#" id="Sistema">
+                <img src="img/computer_explorer_cool-0.png" alt="" class="iconos">
+            </a>
+            <a href="#" id="basura">
+                <img src="img/recycle_bin_empty_cool-0.png" alt="" class="iconos">
+            </a>
+            <div class="audio">
+                <a href="#" id="openWebamp">
+                    <img src="img/cd_audio_cd_a-4.png" alt="Música" class="iconos">
+                </a>            
             </div>
-            <div id="winamp-container"></div>
+                <div id="webampModal">
+                    <button id="closeModal"></button>
+                    <div id="webampContainer"></div>
+                </div>
     </div>
-    <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
-    <script src="js/webamp.js"></script>
-    <script src="js/webamp-api.js"></script>
+      <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+      <script>
+           document.getElementById("openWebamp").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            // Muestra el modal
+            document.getElementById("webampModal").style.display = "block";
+
+            // Si Webamp no ha sido creado, lo inicializa
+            if (!window.webamp) {
+                window.webamp = new Webamp({
+                    initialTracks: [
+                        {
+                            metaData: { artist: "Artista", title: "Canción" },
+                            url: "ruta/a/tu/musica.mp3" // Cambia esto por tu archivo MP3
+                        }
+                    ]
+                });
+                webamp.renderWhenReady(document.getElementById("webampContainer"));
+            }
+        });
+
+        // Botón para cerrar el modal
+        document.getElementById("closeModal").addEventListener("click", function() {
+            document.getElementById("webampModal").style.display = "none";
+        });
+      </script>
 </body>
 </html>

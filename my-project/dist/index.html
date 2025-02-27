@@ -9,13 +9,48 @@
 </head>
 <body>
     <div class="asuka">
-            <img src="/computer_explorer_cool-0.5354d448.png" alt="" class="iconos"><a href="#" class="titulo">Sistema</a>
-            <img src="/recycle_bin_empty_cool-0.acf2b98a.png" alt="" class="iconos"><a href="#" class="titulo">Basura</a>
-            <div class="">
-                <img src="/dekst3p-71203106-be50-44a3-b424-e377c6572bef.e1b75369.png" alt="" class="pestaña">
+            <a href="#" id="Sistema">
+                <img src="/computer_explorer_cool-0.5354d448.png" alt="" class="iconos">
+            </a>
+            <a href="#" id="basura">
+                <img src="/recycle_bin_empty_cool-0.acf2b98a.png" alt="" class="iconos">
+            </a>
+            <div class="audio">
+                <a href="#" id="openWebamp">
+                    <img src="/cd_audio_cd_a-4.d7ab3f0c.png" alt="Música" class="iconos">
+                </a>            
             </div>
-            <div id="winamp-container"></div>
+                <div id="webampModal">
+                    <button id="closeModal"></button>
+                    <div id="webampContainer"></div>
+                </div>
     </div>
-    <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>    
+      <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+      <script>document.getElementById("openWebamp").addEventListener("click", function(event) {
+    event.preventDefault();
+    // Muestra el modal
+    document.getElementById("webampModal").style.display = "block";
+    // Si Webamp no ha sido creado, lo inicializa
+    if (!window.webamp) {
+        window.webamp = new Webamp({
+            initialTracks: [
+                {
+                    metaData: {
+                        artist: "Artista",
+                        title: "Canci\xf3n"
+                    },
+                    url: "ruta/a/tu/musica.mp3" // Cambia esto por tu archivo MP3
+                }
+            ]
+        });
+        webamp.renderWhenReady(document.getElementById("webampContainer"));
+    }
+});
+// Botón para cerrar el modal
+document.getElementById("closeModal").addEventListener("click", function() {
+    document.getElementById("webampModal").style.display = "none";
+});
+
+</script>
 <script src="/my-project.59712999.js"></script></body>
 </html>
