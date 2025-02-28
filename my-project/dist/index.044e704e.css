@@ -13216,6 +13216,7 @@ body {
 }
 
 .inicio {
+  color: #000;
   cursor: pointer;
   background: #bfbfbf;
   border: 2px solid gray;
@@ -13231,10 +13232,11 @@ body {
 }
 
 .espacio {
-  flex-grow: 2;
+  flex-grow: 1;
 }
 
 .hora {
+  color: #000;
   background: #bfbfbf;
   border: 2px solid gray;
   padding: 5px 10px;
