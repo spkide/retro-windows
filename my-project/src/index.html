@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="scss/styles.scss">
+    <link rel="icon" href="img/computer_explorer_cool-0.png" type="x-icon/image">
     <title>PixelVerse</title>
 </head>
 <body>
@@ -20,37 +21,14 @@
                     <img src="img/cd_audio_cd_a-4.png" alt="Música" class="iconos">
                 </a>            
             </div>
-                <div id="webampModal">
-                    <button id="closeModal"></button>
-                    <div id="webampContainer"></div>
-                </div>
+            <div class="barra98">
+                <div class="inicio">Inicio</div>
+                <div class="espacio"></div>
+                <div class="hora">12:00 PM</div>
+              </div>              
     </div>
       <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
       <script>
-           document.getElementById("openWebamp").addEventListener("click", function(event) {
-            event.preventDefault();
-
-            // Muestra el modal
-            document.getElementById("webampModal").style.display = "block";
-
-            // Si Webamp no ha sido creado, lo inicializa
-            if (!window.webamp) {
-                window.webamp = new Webamp({
-                    initialTracks: [
-                        {
-                            metaData: { artist: "Artista", title: "Canción" },
-                            url: "ruta/a/tu/musica.mp3" // Cambia esto por tu archivo MP3
-                        }
-                    ]
-                });
-                webamp.renderWhenReady(document.getElementById("webampContainer"));
-            }
-        });
-
-        // Botón para cerrar el modal
-        document.getElementById("closeModal").addEventListener("click", function() {
-            document.getElementById("webampModal").style.display = "none";
-        });
       </script>
 </body>
 </html>
